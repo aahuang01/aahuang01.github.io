@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import { useLocation } from "react-router-dom";
 import { urlToPage } from "../utils/helpers";
@@ -11,6 +11,11 @@ export interface Props {
 const Layout: React.FC<Props> = ({ children }) => {
   const location = useLocation();
   const [currentPage, setCurrentPage] = useState(urlToPage(location.pathname));
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(() => {
+    setCurrentPage(urlToPage(location.pathname));
+  });
 
   return (
     <div className="min-h-screen flex flex-col">

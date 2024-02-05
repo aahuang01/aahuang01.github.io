@@ -10,7 +10,7 @@ const About: React.FC<Props> = () => {
       <div className="w-full flex-1 max-h-full max-w-full h-auto w-auto overflow-hidden flex justify-center items-start">
         <img
           src={PumpkinsPortrait}
-          alt="Aaron, sitting with 2 carved pumpkins on a picnic bench."
+          alt="Aaron, sitting with 2 carved pumpkins on a wooden bench."
         />
       </div>
       <div className="flex-1">

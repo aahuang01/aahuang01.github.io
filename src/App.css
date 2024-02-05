@@ -1,6 +1,47 @@
 body {
   font-size: 16px;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.2px;
+}
+
+.line1,
+.line2,
+.line3 {
+  transition: transform 0.2s;
+}
+
+.line1:not(.open),
+.line2:not(.open),
+.line3:not(.open) {
+  transition: transform 0.2s 0.2s;
+}
+
+.line1 > .inner,
+.line2 > .inner,
+.line3 > .inner {
+  transition: transform 0.2s 0.2s;
+}
+
+.line1:not(.open) > .inner,
+.line2:not(.open) > .inner,
+.line3:not(.open) > .inner {
+  transition: transform 0.2s;
+}
+
+.line1.open {
+  transform: translateY(8.4px);
+}
+.line3.open {
+  transform: translateY(-8.4px);
+}
+
+.line1.open > .inner {
+  transform: rotate(45deg);
+}
+.line2.open > .inner {
+  transform: rotate(45deg);
+}
+.line3.open > .inner {
+  transform: rotate(-45deg);
 }
 
 .pen {

@@ -14,10 +14,11 @@ export interface Props {
 const Navbar: React.FC<Props> = ({ currentPage, setPage }) => {
   const [underlineWidth, setUnderlineWidth] = useState(0);
   const [underlineOffset, setUnderlineOffset] = useState(0);
+  const [hamburgerOpen, setHamburgerOpen] = useState(false);
 
-  const workRef = useRef<HTMLDivElement | null>(null);
-  const aboutRef = useRef<HTMLDivElement | null>(null);
-  const cvRef = useRef<HTMLDivElement | null>(null);
+  const workRef = useRef<HTMLAnchorElement | null>(null);
+  const aboutRef = useRef<HTMLAnchorElement | null>(null);
+  const cvRef = useRef<HTMLAnchorElement | null>(null);
   const underlineRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -45,41 +46,93 @@ const Navbar: React.FC<Props> = ({ currentPage, setPage }) => {
   return (
     <div className="flex w-full justify-between items-center px-[7%] lg:px-[150px] py-10">
       <Link to="/">
-        <div
-          className="flex-shrink"
-          onClick={() => setPage(Page.WORK)}
-          ref={workRef}
-        >
+        <div className="flex-shrink" onClick={() => setPage(Page.WORK)}>
           <Logo />
         </div>
       </Link>
 
       {/* Hamburger menu at < md */}
-      <div className="md:hidden cursor-pointer">
-        <HamburgerIcon className="fill-almostBlack w-7" />
+      <div
+        className="md:hidden cursor-pointer"
+        onClick={() => setHamburgerOpen(!hamburgerOpen)}
+      >
+        <HamburgerIcon
+          className="fill-almostBlack w-7 z-20"
+          open={hamburgerOpen}
+        />
+      </div>
+      <div
+        className={classNames(
+          hamburgerOpen
+            ? "md:hidden absolute top-0 left-0 h-screen w-screen bg-background z-10 flex flex-col justify-center items-center gap-16"
+            : "hidden"
+        )}
+      >
+        <Link
+          to="/"
+          onClick={() => {
+            setHamburgerOpen(false);
+          }}
+        >
+          <SpreadCaps className="text-contrastGray cursor-pointer text-24">
+            WORK
+            <div
+              className={classNames(
+                currentPage === Page.WORK ? "opacity-100" : "opacity-0",
+                "h-[2px] w-full bg-contrastGray transition-opacity"
+              )}
+            />
+          </SpreadCaps>
+        </Link>
+        <Link
+          to="about"
+          onClick={() => {
+            setHamburgerOpen(false);
+          }}
+        >
+          <SpreadCaps className="text-contrastGray cursor-pointer text-24">
+            ABOUT
+            <div
+              className={classNames(
+                currentPage === Page.ABOUT ? "opacity-100" : "opacity-0",
+                "h-[2px] w-full bg-contrastGray transition-opacity"
+              )}
+            />
+          </SpreadCaps>
+        </Link>
+        <Link
+          to="cv"
+          onClick={() => {
+            setHamburgerOpen(false);
+          }}
+        >
+          <SpreadCaps className="text-contrastGray cursor-pointer text-24">
+            CV
+            <div
+              className={classNames(
+                currentPage === Page.CV ? "opacity-100" : "opacity-0",
+                "h-[2px] w-full bg-contrastGray transition-opacity"
+              )}
+            />
+          </SpreadCaps>
+        </Link>
       </div>
 
       {/* Exapanded links at > md */}
       <div className="hidden md:grid grid-cols-[auto_auto_auto] grid-rows-2 md:gap-x-16 h-min">
-        <Link to="/">
+        <Link ref={workRef} to="/">
           <SpreadCaps className="text-contrastGray cursor-pointer">
-            <div onClick={() => setPage(Page.WORK)} ref={workRef}>
-              WORK
-            </div>
+            WORK
           </SpreadCaps>
         </Link>
-        <Link to="about">
+        <Link ref={aboutRef} to="about">
           <SpreadCaps className="text-contrastGray cursor-pointer">
-            <div onClick={() => setPage(Page.ABOUT)} ref={aboutRef}>
-              ABOUT
-            </div>
+            ABOUT
           </SpreadCaps>
         </Link>
-        <Link to="cv">
+        <Link ref={cvRef} to="cv">
           <SpreadCaps className="text-contrastGray cursor-pointer">
-            <div onClick={() => setPage(Page.CV)} ref={cvRef}>
-              CV
-            </div>
+            CV
           </SpreadCaps>
         </Link>
         <div

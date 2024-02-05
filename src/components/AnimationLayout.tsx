@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Outlet } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-import Layout from "./Layout";
+import Layout from "../pages/Layout";
 
 export interface Props {}
 

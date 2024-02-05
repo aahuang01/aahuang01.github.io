@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { classNames } from "../utils/helpers";
 import Header from "./Header";
 import Secondary from "./Secondary";
@@ -8,6 +9,7 @@ interface Props {
   label: string;
   title: string;
   subtitle: string;
+  link: string;
   className?: string;
 }
 
@@ -16,24 +18,27 @@ const ProjectItem: React.FC<Props> = ({
   label,
   title,
   subtitle,
+  link,
   className,
 }) => {
   return (
-    <div
-      className={classNames(
-        className ? className : "",
-        "flex w-full gap-5 flex-col md:flex-row"
-      )}
-    >
-      <div className="shadow-projectItem rounded-[3px]">
-        <img src={image} alt={`${title}`} />
+    <Link to={link}>
+      <div
+        className={classNames(
+          className ? className : "",
+          "flex w-full gap-5 flex-col md:flex-row"
+        )}
+      >
+        <div className="shadow-projectItem rounded-[3px]">
+          <img src={image} alt={`${title}`} />
+        </div>
+        <div className="md:min-w-[250px] lg:min-w-[315px] flex flex-col">
+          <SpreadCaps className="mb-1.5 text-appleGray">{label}</SpreadCaps>
+          <Header className="mb-1">{title}</Header>
+          <Secondary>{subtitle}</Secondary>
+        </div>
       </div>
-      <div className="md:min-w-[250px] lg:min-w-[315px] flex flex-col">
-        <SpreadCaps className="mb-1.5 text-appleGray">{label}</SpreadCaps>
-        <Header className="mb-1">{title}</Header>
-        <Secondary>{subtitle}</Secondary>
-      </div>
-    </div>
+    </Link>
   );
 };
 

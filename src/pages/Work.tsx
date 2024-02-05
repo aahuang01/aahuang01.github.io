@@ -30,24 +30,28 @@ const Work: React.FC<Props> = () => {
           label="01 | PRODUCT IDEATION"
           title="Edenspiekermann"
           subtitle="Apple Vision Pro"
+          link="/edenspiekermann"
         />
         <ProjectItem
           image={BankOfAmerica}
           label="02 | DESIGNS SYSTEMS"
           title="Bank of America"
           subtitle="AI/Erica"
+          link="/edenspiekermann"
         />
         <ProjectItem
           image={HighlandLibrary}
           label="03 | PRODUCT DESIGN"
           title="Highland Library"
           subtitle="Website Redesign"
+          link="/edenspiekermann"
         />
         <ProjectItem
           image={BantSports}
           label="04 | DESIGNS SYSTEMS"
           title="Bant' Sports"
           subtitle="Pool Creation Flow"
+          link="/edenspiekermann"
         />
       </div>
     </div>
