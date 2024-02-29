@@ -23,14 +23,21 @@ const CVItem: React.FC<Props> = ({
         "flex justify-between gap-10"
       )}
     >
-      <div className="w-3/4">
-        <div className="flex gap-1.5">
-          <div className="text-24 text-almostBlack font-medium">{title}</div>
-          <div className="text-24 text-appleGray font-medium">{role}</div>
+      <div className="md:w-3/4">
+        <div className="xl:flex gap-1.5">
+          <div className="text-16 md:text-24 text-almostBlack font-medium flex w-full md:w-auto justify-between items-center md:block">
+            {title}
+            <Paragraph className="!text-appleGray text-right shrink-0 md:hidden">
+              {time ? time : " "}
+            </Paragraph>
+          </div>
+          <div className="text-16 md:text-24 text-appleGray font-medium ml-5 md:ml-0">
+            {role}
+          </div>
         </div>
         {children}
       </div>
-      <Paragraph className="!text-appleGray text-right shrink-0">
+      <Paragraph className="!text-appleGray text-right shrink-0 hidden md:block">
         {time ? time : " "}
       </Paragraph>
     </div>

@@ -5,10 +5,10 @@ import Subheader from "../components/Subheader";
 import ProjectItem from "../components/ProjectItem";
 import SectionSeparator from "../components/SectionSeparator";
 
-import Edenspiekermann from "../assets/images/Edenspiekermann.png";
-import BankOfAmerica from "../assets/images/BankOfAmerica.png";
-import HighlandLibrary from "../assets/images/HighlandLibrary.png";
-import BantSports from "../assets/images/BantSports.png";
+import Edenspiekermann from "../assets/images/Edenspiekermann/ProjectCover.png";
+import BankOfAmerica from "../assets/images/BankOfAmerica/ProjectCover.png";
+import HighlandLibrary from "../assets/images/HighlandLibrary/ProjectCover.png";
+import BantSports from "../assets/images/BantSports/ProjectCover.png";
 
 export interface Props {}
 

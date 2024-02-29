@@ -5,7 +5,7 @@ import HorizontalLine from "./HorizontalLine";
 const Footer: React.FC = () => {
   return (
     <div className="w-full px-[7%] lg:px-[150px]">
-      <HorizontalLine className="hidden md:block bg-conrrastGray" />
+      <HorizontalLine className="hidden md:block bg-contrastGray" />
       <div className="flex w-full justify-between items-center my-10">
         <div className="flex gap-x-16">
           <SpreadCaps className="text-contrastGray">

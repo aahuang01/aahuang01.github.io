@@ -11,6 +11,10 @@ module.exports = {
       almostBlack: "#363636",
       background: "#fafafa",
       contrastGray: "#5d6465",
+      edenspiekermann: "#EDEDED",
+      bofa: "#ffc6ce",
+      highland: "#e3edd9",
+      bant: "#c5dbe9",
     },
     screens: {
       sm: "480px",
@@ -21,6 +25,9 @@ module.exports = {
 
       lg: "1024px",
       // => @media (min-width: 1024px) { ... }
+
+      xl: "1300px",
+      // => @media (min-width: 1300px) { ... }
     },
     fontSize: {
       14: ["0.875rem", "1.25rem"],
@@ -35,6 +42,7 @@ module.exports = {
     extend: {
       boxShadow: {
         projectItem: "0px 3px 5px rgba(0, 0, 0, 0.25)",
+        projectItemHover: "0px 4px 15px 0px rgba(0, 0, 0, 0.40)",
       },
     },
   },

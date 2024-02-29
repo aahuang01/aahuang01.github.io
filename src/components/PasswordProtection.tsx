@@ -17,7 +17,7 @@ const PasswordProtection: React.FC<Props> = ({ children, className }) => {
     <div
       className={classNames(
         className ? className : "",
-        "w-full flex flex-col items-center px-[7%] lg:px-[150px] py-5 md:py-20 gap-16"
+        "w-full flex flex-col items-center px-[7%] lg:px-[150px] py-5 md:py-16"
       )}
     >
       {authenticated ? (
@@ -33,7 +33,10 @@ const PasswordProtection: React.FC<Props> = ({ children, className }) => {
           <div className="flex flex-col gap-8 md:gap-16">
             <Header>Uh oh, Totoro ate the content of this project page.</Header>
             <Header>Type in the password to view this project.</Header>
-            <form onSubmit={() => setAuthenticated(true)}>
+            <form
+              onSubmit={() => setAuthenticated(true)}
+              className="flex w-full gap-2"
+            >
               <input
                 className="border-2 border-appleGray rounded-[5px] px-4 py-2 text-24 font-medium text-contrastGray focus:outline-none w-full"
                 value={password}
@@ -41,6 +44,9 @@ const PasswordProtection: React.FC<Props> = ({ children, className }) => {
                 type="password"
                 placeholder="Password"
               />
+              <button className="bg-almostBlack text-background text-20 font-medium rounded-[5px] py-4 px-6">
+                Submit
+              </button>
             </form>
           </div>
         </div>

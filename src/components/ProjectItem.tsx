@@ -29,7 +29,7 @@ const ProjectItem: React.FC<Props> = ({
           "flex w-full gap-5 flex-col md:flex-row"
         )}
       >
-        <div className="shadow-projectItem rounded-[3px]">
+        <div className="shadow-projectItem hover:shadow-projectItemHover transition-shadow rounded-[3px]">
           <img src={image} alt={`${title}`} />
         </div>
         <div className="md:min-w-[250px] lg:min-w-[315px] flex flex-col">

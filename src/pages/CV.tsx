@@ -3,12 +3,14 @@ import CVSection from "../components/CVSection";
 import CVEducationItem from "../components/CVEducationItem";
 import CVItem from "../components/CVItem";
 import CVProject from "../components/CVProject";
+import Header from "../components/Header";
 
 export interface Props {}
 
 const CV: React.FC<Props> = () => {
   return (
     <div className="w-full px-[7%] lg:px-[150px] pt-10 pb-5">
+      <Header className="mb-7">Aaron Huang</Header>
       <CVSection title="EDUCATION">
         <CVEducationItem
           title="University of Michigan"
