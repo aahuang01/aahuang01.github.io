@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Outlet } from "react-router-dom";
 import { useLocation } from "react-router-dom";
@@ -7,7 +7,7 @@ import Layout from "../pages/Layout";
 export interface Props {}
 
 const AnimationLayout: React.FC<Props> = () => {
-  const location = useLocation();
+  const { pathname } = useLocation();
 
   const pageVariants = {
     exit: {
@@ -30,10 +30,14 @@ const AnimationLayout: React.FC<Props> = () => {
     duration: 0.3,
   };
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
     <Layout>
       <motion.div
-        key={location.pathname}
+        key={pathname}
         initial="initial"
         animate="in"
         variants={pageVariants}

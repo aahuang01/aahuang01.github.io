@@ -4,6 +4,10 @@ body {
   background-color: #fafafa;
 }
 
+.ProjectItem:last-child > .FooterFiller {
+  display: block;
+}
+
 .line1,
 .line2,
 .line3 {

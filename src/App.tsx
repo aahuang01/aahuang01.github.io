@@ -8,41 +8,34 @@ import About from "./pages/About";
 import CV from "./pages/CV";
 import AnimationLayout from "./components/AnimationLayout";
 import Edenspiekermann from "./pages/Edenspiekermann";
+import BankOfAmerica from "./pages/BankOfAmerica";
 
 export const AuthenticatedContext = createContext<any>(null);
-export const BackgroundColorContext = createContext<any>(null);
 
 const App: React.FC = () => {
   const [authenticated, setAuthenticated] = useState(false);
-  const [bgColor, setBGColor] = useState("");
 
   return (
     <>
-      <BackgroundColorContext.Provider
+      <AuthenticatedContext.Provider
         value={{
-          bgColor: bgColor,
-          setBGColor: setBGColor,
+          authenticated: authenticated,
+          setAuthenticated: setAuthenticated,
         }}
       >
-        <AuthenticatedContext.Provider
-          value={{
-            authenticated: authenticated,
-            setAuthenticated: setAuthenticated,
-          }}
-        >
-          <BrowserRouter>
-            <Routes>
-              <Route path="/" element={<AnimationLayout />}>
-                <Route index element={<Work />} />
-                <Route path="about" element={<About />} />
-                <Route path="cv" element={<CV />} />
-                <Route path="edenspiekermann" element={<Edenspiekermann />} />
-                <Route path="*" element={<div>todo</div>} />
-              </Route>
-            </Routes>
-          </BrowserRouter>
-        </AuthenticatedContext.Provider>
-      </BackgroundColorContext.Provider>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<AnimationLayout />}>
+              <Route index element={<Work />} />
+              <Route path="about" element={<About />} />
+              <Route path="cv" element={<CV />} />
+              <Route path="edenspiekermann" element={<Edenspiekermann />} />
+              <Route path="bofa" element={<BankOfAmerica />} />
+              <Route path="*" element={<div>todo</div>} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      </AuthenticatedContext.Provider>
     </>
   );
 };

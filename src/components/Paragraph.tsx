@@ -10,7 +10,7 @@ const Paragraph: React.FC<Props> = ({ children, className }) => {
     <div
       className={classNames(
         className ? className : "",
-        "text-14 lg:text-16 font-medium text-almostBlack" // todo adjust text size at breakpoints when confirmed
+        "text-14 lg:text-16 text-almostBlack"
       )}
     >
       {children}

@@ -4,7 +4,7 @@ import HorizontalLine from "./HorizontalLine";
 
 const Footer: React.FC = () => {
   return (
-    <div className="w-full px-[7%] lg:px-[150px]">
+    <div className="w-full px-[7%] lg:px-[150px] z-50">
       <HorizontalLine className="hidden md:block bg-contrastGray" />
       <div className="flex w-full justify-between items-center my-10">
         <div className="flex gap-x-16">

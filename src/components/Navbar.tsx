@@ -44,7 +44,7 @@ const Navbar: React.FC<Props> = ({ currentPage, setPage }) => {
   }, [currentPage]);
 
   return (
-    <div className="flex w-full justify-between items-center px-[7%] lg:px-[150px] py-10">
+    <div className="flex w-full justify-between items-center px-[7%] lg:px-[150px] py-10 z-50">
       <Link to="/">
         <div className="flex-shrink" onClick={() => setPage(Page.WORK)}>
           <Logo />
@@ -119,7 +119,7 @@ const Navbar: React.FC<Props> = ({ currentPage, setPage }) => {
       </div>
 
       {/* Exapanded links at > md */}
-      <div className="hidden md:grid grid-cols-[auto_auto_auto] grid-rows-2 md:gap-x-16 h-min">
+      <div className="hidden md:grid grid-cols-[auto_auto_auto] grid-rows-[auto_auto] md:gap-x-16 h-min">
         <Link ref={workRef} to="/">
           <SpreadCaps className="text-contrastGray cursor-pointer">
             WORK

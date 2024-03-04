@@ -11,10 +11,13 @@ module.exports = {
       almostBlack: "#363636",
       background: "#fafafa",
       contrastGray: "#5d6465",
-      edenspiekermann: "#EDEDED",
-      bofa: "#ffc6ce",
-      highland: "#e3edd9",
-      bant: "#c5dbe9",
+      sectionBGGray: "#f3f3f3",
+      sectionBGBlack: "#181818",
+      edenspiekermannAccent: "#E64044",
+      edenspiekermannAccentLight: "#FF4C51",
+      bofaAccent: "#EA697B",
+      highlandAccent: "#77AC41",
+      bantAccent: "#439CD4",
     },
     screens: {
       sm: "480px",
@@ -41,8 +44,16 @@ module.exports = {
 
     extend: {
       boxShadow: {
-        projectItem: "0px 3px 5px rgba(0, 0, 0, 0.25)",
-        projectItemHover: "0px 4px 15px 0px rgba(0, 0, 0, 0.40)",
+        projectCover: "0px 3px 5px rgba(0, 0, 0, 0.25)",
+        projectCoverHover: "0px 4px 15px 0px rgba(0, 0, 0, 0.40)",
+      },
+      backgroundImage: {
+        edenspiekermann:
+          "linear-gradient(168deg, rgba(202, 202, 202, 0.10) -9.51%, rgba(202, 202, 202, 0.55) 60.47%, #CACACA 91.18%)",
+        bofa: "linear-gradient(168deg, rgba(255, 197, 205, 0.10) -9.51%, rgba(252, 178, 188, 0.55) 60.47%, #F8A0AC 91.18%)",
+        highland:
+          "linear-gradient(168deg, rgba(201, 232, 169, 0.10) -9.51%, rgba(201, 232, 169, 0.55) 60.47%, #C9E8A9 91.18%)",
+        bant: "linear-gradient(168deg, rgba(178, 208, 227, 0.10) -9.51%, rgba(178, 208, 227, 0.55) 60.47%, #B2D0E3 91.18%)",
       },
     },
   },

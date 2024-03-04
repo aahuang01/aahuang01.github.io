@@ -1,9 +1,8 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import { useLocation } from "react-router-dom";
-import { classNames, urlToPage } from "../utils/helpers";
+import { urlToPage } from "../utils/helpers";
 import Footer from "../components/Footer";
-import { BackgroundColorContext } from "../App";
 
 export interface Props {
   children: any;
@@ -12,7 +11,6 @@ export interface Props {
 const Layout: React.FC<Props> = ({ children }) => {
   const location = useLocation();
   const [currentPage, setCurrentPage] = useState(urlToPage(location.pathname));
-  const { bgColor } = useContext(BackgroundColorContext);
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
@@ -20,12 +18,7 @@ const Layout: React.FC<Props> = ({ children }) => {
   });
 
   return (
-    <div
-      className={classNames(
-        "min-h-screen flex flex-col transition-colors duration-100",
-        bgColor
-      )}
-    >
+    <div className="min-h-screen flex flex-col transition-colors duration-100 relative">
       <header>
         <Navbar
           setPage={(page) => setCurrentPage(page)}
