@@ -11,6 +11,8 @@ interface Props {
 
 const PasswordProtection: React.FC<Props> = ({ children, className }) => {
   const [password, setPassword] = useState("");
+  const [badAttempt, setBadAttempt] = useState(false);
+
   const { authenticated, setAuthenticated } = useContext(AuthenticatedContext);
 
   return (
@@ -37,19 +39,40 @@ const PasswordProtection: React.FC<Props> = ({ children, className }) => {
               </Header>
               <Header>Type in the password to view this project.</Header>
               <form
-                onSubmit={() => setAuthenticated(true)}
+                onSubmit={(event: any) => {
+                  event.preventDefault();
+                  if (password === process.env.REACT_APP_PROJECT_PASSWORD) {
+                    setAuthenticated(true);
+                  } else {
+                    setBadAttempt(true);
+                  }
+                }}
                 className="flex w-full gap-2"
               >
                 <input
                   className="border-2 border-appleGray rounded-[5px] px-4 py-2 text-24 font-medium text-contrastGray focus:outline-none w-full"
                   value={password}
-                  onChange={(e) => setPassword(e.target.value)}
+                  onChange={(e) => {
+                    setBadAttempt(false);
+                    setPassword(e.target.value);
+                  }}
                   type="password"
                   placeholder="Password"
                 />
-                <button className="bg-almostBlack text-background text-20 font-medium rounded-[5px] py-4 px-6">
+                <button
+                  disabled={badAttempt}
+                  className="bg-almostBlack text-background text-20 font-medium rounded-[5px] py-4 px-6 disabled:bg-appleGray"
+                >
                   Submit
                 </button>
+                <div
+                  className={classNames(
+                    "absolute bottom-[100%] right-0 text-[#E64044] font-semibold",
+                    badAttempt ? "block" : "hidden"
+                  )}
+                >
+                  Incorrect password
+                </div>
               </form>
             </div>
           </div>
