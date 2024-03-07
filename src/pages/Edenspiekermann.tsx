@@ -7,6 +7,7 @@ import {
   Alignment,
   ImageSize,
   SectionColor,
+  SectionContent,
   SectionContentImage,
   SectionContentListItem,
   SectionContentParagraph,
@@ -17,8 +18,8 @@ import {
 import Logo from "../assets/images/Edenspiekermann/Logo.png";
 import Cover from "../assets/images/Edenspiekermann/Cover.png";
 import AppleVisionProGif from "../assets/images/Edenspiekermann/ProjectPage/AppleVisionPro.gif";
-import BloombergBusinessModel from "../assets/images/Edenspiekermann/ProjectPage/BloombergBusinessModel.png";
 import BenchmarkingExamples from "../assets/images/Edenspiekermann/ProjectPage/BenchmarkingExamples.png";
+import BenchmarkingExamplesSmall from "../assets/images/Edenspiekermann/ProjectPage/BenchmarkingExamplesSmall.png";
 import Brainstorming from "../assets/images/Edenspiekermann/ProjectPage/Brainstorming.png";
 import AffinityMapping from "../assets/images/Edenspiekermann/ProjectPage/AffinityMapping.png";
 import Flowchart from "../assets/images/Edenspiekermann/ProjectPage/Flowchart.png";
@@ -26,12 +27,119 @@ import ContentCockpit from "../assets/images/Edenspiekermann/ProjectPage/Content
 import PopOutVisuals from "../assets/images/Edenspiekermann/ProjectPage/PopOutVisuals.png";
 import VisualInteractability from "../assets/images/Edenspiekermann/ProjectPage/VisualInteractability.png";
 import Team from "../assets/images/Edenspiekermann/ProjectPage/Team.png";
+import BloombergProfessionalServices from "../assets/images/Edenspiekermann/ProjectPage/BloombergProfessionalServices.png";
+import BloombergDataAnalytics from "../assets/images/Edenspiekermann/ProjectPage/BloombergDataAnalytics.png";
+import BloombergNews from "../assets/images/Edenspiekermann/ProjectPage/BloombergNews.png";
+import BloombergLawAndGovernment from "../assets/images/Edenspiekermann/ProjectPage/BloombergLawAndGovernment.png";
+import { classNames } from "../utils/helpers";
 
 export interface Props {}
 
 const Edenspiekermann: React.FC<Props> = () => {
   const accentColor = "text-edenspiekermannAccent";
   const lightAccentColor = "text-edenspiekermannAccentLight";
+
+  const cardStyle =
+    "flex flex-col items-start rounded-[7px] bg-white h-[300px] w-[160px] md:h-full md:w-full md:max-w-[232px] p-2.5 lg:p-4 shadow-[0_2px_2px_0_rgba(0,0,0,0.25)]";
+  const bloombergCards = (
+    <div className="mx-[28px] sm:mx-[7%] flex flex-col items-center">
+      <div className="grid grid-cols-2 md:grid-cols-4 leading-snug text-14 md:text-16 lg:text-20 gap-x-4 gap-y-8 justify-items-center w-[336px] md:w-auto lg:w-full">
+        <div className={cardStyle}>
+          <div className="absolute top-0 left-0 w-full h-full z-20 rounded-[7px] bg-[#EDEDED] opacity-75" />
+          <div className="absolute top-0 left-0 w-full h-full z-10 rounded-[7px] border border-appleGray" />
+          <img
+            src={BloombergProfessionalServices}
+            alt="A stylized code editor"
+            className="h-[84px] lg:h-[94px] self-center lg:mb-4"
+          />
+          <div className="text-center">Professional Services</div>
+          <div className="flex gap-1">
+            <span className="text-edenspiekermannAccent">→</span>
+            <span>Bloomberg Terminal</span>
+          </div>
+        </div>
+        <div className={cardStyle}>
+          <div className="absolute top-0 left-0 w-full h-full z-20 rounded-[7px] bg-[#EDEDED] opacity-75" />
+          <div className="absolute top-0 left-0 w-full h-full z-10 rounded-[7px] border border-appleGray" />
+          <img
+            src={BloombergDataAnalytics}
+            alt="Graphs and data points"
+            className="h-[84px] lg:h-[94px] self-center lg:mb-4"
+          />
+          <div className="text-center">Data Analytics</div>
+          <div className="flex gap-1">
+            <span className="text-edenspiekermannAccent">→</span>
+            <span>Portfolio Management & Analytics</span>
+          </div>
+          <div className="flex gap-1">
+            <span className="text-edenspiekermannAccent">→</span>
+            <span>Real Time & Data Trading</span>
+          </div>
+        </div>
+        <div className={classNames(cardStyle, "md:col-start-2 md:row-start-1")}>
+          <div className="absolute top-0 left-0 w-full h-full z-10 rounded-[7px] border border-appleGray border-4" />
+          <img
+            src={BloombergNews}
+            alt="Digital news"
+            className="h-[84px] lg:h-[94px] self-center lg:mb-4"
+          />
+          <div className="text-center">Bloomberg News</div>
+          <div className="px-[12px] flex gap-1">
+            <span className="text-edenspiekermannAccent">→</span>
+            <span>News (Articles, Businessweek)</span>
+          </div>
+          <div className="px-[12px] flex gap-1">
+            <span className="text-edenspiekermannAccent">→</span>
+            <span>Audio (Radio, Podcast)</span>
+          </div>
+          <div className="px-[12px] flex gap-1">
+            <span className="text-edenspiekermannAccent">→</span>
+            <span>Video (TV+, Originals)</span>
+          </div>
+          <div className="px-[12px] flex gap-1">
+            <span className="text-edenspiekermannAccent">→</span>
+            <span>Live Events</span>
+          </div>
+          <div className="px-[12px] flex gap-1">
+            <span className="text-edenspiekermannAccent">→</span>
+            <span>Others</span>
+          </div>
+        </div>
+        <div className={cardStyle}>
+          <div className="absolute top-0 left-0 w-full h-full z-20 rounded-[7px] bg-[#EDEDED] opacity-75" />
+          <div className="absolute top-0 left-0 w-full h-full z-10 rounded-[7px] border border-appleGray" />
+
+          <img
+            src={BloombergLawAndGovernment}
+            alt="Items of law"
+            className="h-[84px] lg:h-[94px] self-center lg:mb-4"
+          />
+          <div className="text-center">Bloomberg Law & Government</div>
+        </div>
+        <div className="col-span-2 bg-[#C3CACD] px-7 py-6 rounded-lg max-w-[464px] mt-[18px] lg:mt-[40px] text-16 lg:text-20 md:col-start-2 md:col-span-1 md:w-[464px]">
+          <svg
+            width="47"
+            height="58"
+            viewBox="0 0 47 58"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="absolute bottom-[80%] left-[18%] md:left-[45%] lg:bottom-[90%]"
+          >
+            <path
+              d="M20.7112 2.03363C21.7126 -0.492055 25.2874 -0.492054 26.2888 2.03363L46.5538 53.1443C47.3347 55.1136 45.8836 57.25 43.765 57.25H3.23497C1.11645 57.25 -0.334667 55.1136 0.446174 53.1443L20.7112 2.03363Z"
+              fill="#C3CACD"
+            />
+          </svg>
+          We are focusing on Bloomberg News as it is the <b>most accessible</b>,
+          which means it has the <b>broadest audience</b>, and the{" "}
+          <b>most brand recognition</b> and
+          <b>exposure.</b>
+        </div>
+      </div>
+    </div>
+  );
+
+  const contentCockpit = <div className="bg-white "></div>;
 
   return (
     <PasswordProtection className="overflow-clip">
@@ -96,13 +204,8 @@ const Edenspiekermann: React.FC<Props> = () => {
           new SectionContentParagraph({
             text: "These are the most important sections of Bloomberg’s business model:",
           }),
-          new SectionContentImage({
-            image: (
-              <img
-                src={BloombergBusinessModel}
-                alt="We are focusing on Bloomberg News as it is the most accessible, which means it has the broadest audience, and the most brand recognition and exposure."
-              />
-            ),
+          new SectionContent({
+            content: bloombergCards,
           }),
         ]}
         accentColor={accentColor}
@@ -119,6 +222,12 @@ const Edenspiekermann: React.FC<Props> = () => {
             image: (
               <img
                 src={BenchmarkingExamples}
+                alt="Examples of competitive benchmarking for the AR/VR space."
+              />
+            ),
+            smallImage: (
+              <img
+                src={BenchmarkingExamplesSmall}
                 alt="Examples of competitive benchmarking for the AR/VR space."
               />
             ),

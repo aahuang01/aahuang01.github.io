@@ -49,19 +49,23 @@ export class SectionContentParagraph {
 
 export class SectionContentImage {
   image: any;
+  smallImage?: any;
   size: ImageSize;
   alignment: Alignment;
 
   public constructor({
     image,
+    smallImage,
     size,
     alignment,
   }: {
     image: any;
+    smallImage?: any;
     size?: ImageSize;
     alignment?: Alignment;
   }) {
     this.image = image;
+    this.smallImage = smallImage;
     this.size = size !== undefined ? size : ImageSize.REGULAR;
     this.alignment = alignment !== undefined ? alignment : Alignment.LEFT;
   }
@@ -88,6 +92,14 @@ export class SectionContentListItem {
 }
 
 export class SectionContentSpacing {}
+
+export class SectionContent {
+  content: any;
+
+  public constructor({ content }: { content: any }) {
+    this.content = content;
+  }
+}
 
 export enum ContentType {
   TITLE,

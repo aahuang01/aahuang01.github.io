@@ -7,6 +7,7 @@ module.exports = {
       sfProDisplay: ["SFProDisplay", "sans-serif"],
     },
     colors: {
+      white: "#ffffff",
       appleGray: "#a2aaad",
       almostBlack: "#363636",
       background: "#fafafa",

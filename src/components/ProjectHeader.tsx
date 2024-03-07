@@ -19,7 +19,7 @@ const ProjectHeader: React.FC<Props> = ({
   bgColor,
 }) => {
   return (
-    <div className="w-full flex flex-col items-center px-[7%] lg:px-[150px] my-5 md:my-16">
+    <div className="w-full flex flex-col items-center px-[7%] lg:px-[150px] my-5 md:my-16 overflow-x-clip">
       <div
         className={classNames(
           "absolute w-screen z-0",

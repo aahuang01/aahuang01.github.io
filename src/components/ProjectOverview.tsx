@@ -9,14 +9,14 @@ export interface Props {
 
 const ProjectOverview: React.FC<Props> = ({ description, sections }) => {
   return (
-    <div className="w-full flex flex-col items-center px-[7%] lg:px-[250px] my-5 md:my-16">
+    <div className="w-full flex flex-col items-center px-[7%] lg:px-[250px] my-10 md:my-16">
       <Paragraph className="text-contrastGray mb-9">{description}</Paragraph>
       <HorizontalLine />
-      <div className="w-full flex flex-col md:flex-row justify-between gap-10 mt-6">
+      <div className="w-full flex flex-col md:flex-row justify-between gap-8 md:gap-10 mt-6">
         {sections.map((section, sectionKey) => {
           return (
             <div key={sectionKey}>
-              <div className="text-16 md:text-20 text-almostBlack font-medium mb-4">
+              <div className="text-16 md:text-20 text-almostBlack font-medium mb-2.5 md:mb-4">
                 {section.title}
               </div>
               {section.values.map((value, valueKey) => {
