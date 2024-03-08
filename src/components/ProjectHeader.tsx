@@ -19,18 +19,18 @@ const ProjectHeader: React.FC<Props> = ({
   bgColor,
 }) => {
   return (
-    <div className="w-full flex flex-col items-center px-[7%] lg:px-[150px] my-5 md:my-16 overflow-x-clip">
+    <div className="w-full flex flex-col items-center px-[7%] lg:px-[150px] my-5 md:mt-12 overflow-x-clip text-almostBlack">
       <div
         className={classNames(
           "absolute w-screen z-0",
           // If the header or padding is ever changed, the calculated numbers below will need to be also
-          "top-[calc(-20px-144px)] h-[calc(100%+20px+144px)] md:top-[calc(-64px-144px)] md:h-[calc(100%+64px+144px)]",
+          "top-[calc(-20px-144px)] h-[calc(100%+20px+144px)] md:top-[calc(-48px-144px)] md:h-[calc(100%+48px+144px)]",
           bgColor
         )}
       />
       <img src={logoImg} alt="Project logo" className="h-10" />
-      <Header className="mt-9">{title}</Header>
-      <Subheader className="mt-20 text-center">{subtitle}</Subheader>
+      <Header className="mt-8">{title}</Header>
+      <Subheader className="mt-16 text-center">{subtitle}</Subheader>
       <img
         src={coverImg}
         alt="Cover containing examples of work"

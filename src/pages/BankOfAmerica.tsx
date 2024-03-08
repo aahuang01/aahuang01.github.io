@@ -47,6 +47,7 @@ const BankOfAmerica: React.FC<Props> = () => {
           {
             title: "Tools",
             values: ["Sketch", "InVision (DSM)", "Keynote"],
+            inlineWhenSmall: true,
           },
           {
             title: "Disciplines",
@@ -55,6 +56,7 @@ const BankOfAmerica: React.FC<Props> = () => {
               "Information Architecture",
               "Systems Documentation",
             ],
+            inlineWhenSmall: true,
           },
         ]}
       />

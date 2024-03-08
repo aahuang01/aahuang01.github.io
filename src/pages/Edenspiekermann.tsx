@@ -14,6 +14,7 @@ import {
   SectionContentSpacing,
   SectionContentTitle,
 } from "../utils/constants";
+import { classNames } from "../utils/helpers";
 
 import Logo from "../assets/images/Edenspiekermann/Logo.png";
 import Cover from "../assets/images/Edenspiekermann/Cover.png";
@@ -24,14 +25,15 @@ import Brainstorming from "../assets/images/Edenspiekermann/ProjectPage/Brainsto
 import AffinityMapping from "../assets/images/Edenspiekermann/ProjectPage/AffinityMapping.png";
 import Flowchart from "../assets/images/Edenspiekermann/ProjectPage/Flowchart.png";
 import ContentCockpit from "../assets/images/Edenspiekermann/ProjectPage/ContentCockpit.png";
-import PopOutVisuals from "../assets/images/Edenspiekermann/ProjectPage/PopOutVisuals.png";
-import VisualInteractability from "../assets/images/Edenspiekermann/ProjectPage/VisualInteractability.png";
+import PopOutVisuals1 from "../assets/images/Edenspiekermann/ProjectPage/PopOutVisuals1.png";
+import Arrow1 from "../assets/images/Edenspiekermann/ProjectPage/Arrow1.png";
+import PopOutVisuals2 from "../assets/images/Edenspiekermann/ProjectPage/PopOutVisuals2.png";
+import VirtualInteractability from "../assets/images/Edenspiekermann/ProjectPage/VirtualInteractability.png";
 import Team from "../assets/images/Edenspiekermann/ProjectPage/Team.png";
 import BloombergProfessionalServices from "../assets/images/Edenspiekermann/ProjectPage/BloombergProfessionalServices.png";
 import BloombergDataAnalytics from "../assets/images/Edenspiekermann/ProjectPage/BloombergDataAnalytics.png";
 import BloombergNews from "../assets/images/Edenspiekermann/ProjectPage/BloombergNews.png";
 import BloombergLawAndGovernment from "../assets/images/Edenspiekermann/ProjectPage/BloombergLawAndGovernment.png";
-import { classNames } from "../utils/helpers";
 
 export interface Props {}
 
@@ -108,7 +110,6 @@ const Edenspiekermann: React.FC<Props> = () => {
         <div className={cardStyle}>
           <div className="absolute top-0 left-0 w-full h-full z-20 rounded-[7px] bg-[#EDEDED] opacity-75" />
           <div className="absolute top-0 left-0 w-full h-full z-10 rounded-[7px] border border-appleGray" />
-
           <img
             src={BloombergLawAndGovernment}
             alt="Items of law"
@@ -139,7 +140,83 @@ const Edenspiekermann: React.FC<Props> = () => {
     </div>
   );
 
-  const contentCockpit = <div className="bg-white "></div>;
+  const contentCockpit = (
+    <div className="bg-white flex flex-col mx-[28px] sm:mx-[7%] lg:mx-[150px] mb-20 md:mb-10">
+      <div className="py-8 px-7 md:px-[97px] md:py-12">
+        <div className="text-20 font-medium mb-4">Content Cockpit</div>
+        <div>
+          Bloomberg content at a glance: users have easy access to content from
+          different categories (e.g. stocks, top headlines, podcasts). The
+          cockpit allows the user to isolate one page or access all information
+          simultaneously in space without needing to switch between pages.
+        </div>
+      </div>
+      <div className="bg-[#E3E3E3] text-16 py-8 px-7 md:py-[22px] object-contain flex flex-col items-center">
+        <img
+          src={ContentCockpit}
+          alt="Content cockpit"
+          className="max-h-[345px] max-w-full"
+        />
+      </div>
+    </div>
+  );
+
+  const popOutVisuals = (
+    <div className="bg-white flex flex-col mx-[28px] sm:mx-[7%] lg:mx-[150px] mb-10">
+      <div className="py-8 px-7 md:px-[97px] md:py-12">
+        <div className="text-20 font-medium mb-4">Pop-Out Visuals</div>
+        <div className="grid grid-cols-[auto] md:grid-cols-[auto_auto] gap-4 lg:gap-8">
+          <div>
+            When utilizing supporting media in video content, users are able to
+            interact with content inside the video.
+          </div>
+          <div>
+            Example: The newscaster is explaining an investment trend, but the
+            user wants to see a larger version of the chart behind them. The
+            user can trace the outline of the graph and make that their primary
+            view while still listening in.
+          </div>
+        </div>
+      </div>
+      <div className="bg-[#E3E3E3] text-16 px-2 py-8 md:px-7 md:py-[22px] object-contain flex items-center justify-center max-w-full">
+        <div className="max-w-[389px]">
+          <img src={PopOutVisuals1} alt="Pop-out visuals 1" />
+        </div>
+        <div className="w-[85%] sm:w-[50%] max-w-[98px]">
+          <img src={Arrow1} alt="arrow" />
+        </div>
+        <div className="max-w-[281px]">
+          <img src={PopOutVisuals2} alt="Pop-out visuals 2" />
+        </div>
+      </div>
+    </div>
+  );
+
+  const virtualInteractability = (
+    <div className="bg-white flex flex-col mx-[28px] sm:mx-[7%] lg:mx-[150px] mb-10">
+      <div className="py-8 px-7 md:px-[97px] md:py-12">
+        <div className="text-20 font-medium mb-4">Virtual Interact-ability</div>
+        <div className="grid grid-cols-[auto] md:grid-cols-[auto_auto] gap-4 lg:gap-8">
+          <div>
+            Allow virtual attendees’ personal avatars to interact with the
+            people there in person.
+          </div>
+          <div>
+            Example: An online user is able to raise their hand to ask questions
+            during a Q&A session and types comments that are displayed above
+            their character.
+          </div>
+        </div>
+      </div>
+      <div className="bg-[#E3E3E3] text-16 px-7 object-contain flex flex-col items-center">
+        <img
+          src={VirtualInteractability}
+          alt="Virtual interactability"
+          className="max-h-[389px] max-w-full"
+        />
+      </div>
+    </div>
+  );
 
   return (
     <PasswordProtection className="overflow-clip">
@@ -164,10 +241,12 @@ const Edenspiekermann: React.FC<Props> = () => {
           {
             title: "Tools",
             values: ["Figma", "Keynote"],
+            inlineWhenSmall: true,
           },
           {
             title: "Disciplines",
             values: ["Competitive Analysis", "User Research"],
+            inlineWhenSmall: true,
           },
         ]}
       />
@@ -317,17 +396,26 @@ const Edenspiekermann: React.FC<Props> = () => {
             text: "Our final ideas were curated from the brainstorming and revision process detailed above and sketched out into these thought starters. Our hope with these ideas is not that Bloomberg picks some of them and implements them, although that wouldn’t be a bad outcome, but rather that they use these as inspiration to help guide their own ideation of potential features/products for Bloomberg to incorporate into the Apple Vision Pro experience.",
           }),
           new SectionContentSpacing(),
-          new SectionContentImage({
-            image: <img src={ContentCockpit} alt="Content cockpit" />,
+          new SectionContent({
+            content: contentCockpit,
           }),
-          new SectionContentImage({
-            image: <img src={PopOutVisuals} alt="Pop-out visuals" />,
+          new SectionContent({
+            content: popOutVisuals,
           }),
-          new SectionContentImage({
-            image: (
-              <img src={VisualInteractability} alt="Visual interact-ability" />
-            ),
+          new SectionContent({
+            content: virtualInteractability,
           }),
+          // new SectionContentImage({
+          //   image: <img src={ContentCockpit} alt="Content cockpit" />,
+          // }),
+          // new SectionContentImage({
+          //   image: <img src={PopOutVisuals1} alt="Pop-out visuals" />,
+          // }),
+          // new SectionContentImage({
+          //   image: (
+          //     <img src={VisualInteractability} alt="Visual interact-ability" />
+          //   ),
+          // }),
         ]}
         accentColor={accentColor}
         bgColor={SectionColor.GRAY}

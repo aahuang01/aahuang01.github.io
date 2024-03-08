@@ -1,15 +1,16 @@
 import React from "react";
 import Paragraph from "./Paragraph";
 import HorizontalLine from "./HorizontalLine";
+import { classNames } from "../utils/helpers";
 
 export interface Props {
   description: string;
-  sections: { title: string; values: string[] }[];
+  sections: { title: string; values: string[]; inlineWhenSmall?: boolean }[];
 }
 
 const ProjectOverview: React.FC<Props> = ({ description, sections }) => {
   return (
-    <div className="w-full flex flex-col items-center px-[7%] lg:px-[250px] my-10 md:my-16">
+    <div className="w-full flex flex-col items-center px-[7%] lg:px-[250px] mb-10 mt-8 md:mb-16 md:mt-8">
       <Paragraph className="text-contrastGray mb-9">{description}</Paragraph>
       <HorizontalLine />
       <div className="w-full flex flex-col md:flex-row justify-between gap-8 md:gap-10 mt-6">
@@ -21,12 +22,22 @@ const ProjectOverview: React.FC<Props> = ({ description, sections }) => {
               </div>
               {section.values.map((value, valueKey) => {
                 return (
-                  <div
-                    className="text-14 md:text-16 text-contrastGray"
-                    key={valueKey}
-                  >
-                    {value}
-                  </div>
+                  <>
+                    <div
+                      className={classNames(
+                        "text-14 md:text-16 text-contrastGray",
+                        section.inlineWhenSmall ? "inline md:block" : ""
+                      )}
+                      key={valueKey}
+                    >
+                      {value}
+                    </div>
+                    {section.inlineWhenSmall && (
+                      <span className="text-14 text-contrastGray md:hidden last:hidden">
+                        ,{" "}
+                      </span>
+                    )}
+                  </>
                 );
               })}
             </div>

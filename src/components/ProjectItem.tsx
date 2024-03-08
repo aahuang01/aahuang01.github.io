@@ -73,7 +73,7 @@ const ProjectItem: React.FC<Props> = ({
   return (
     <div
       className={classNames(
-        "ProjectItem py-10 md:py-20",
+        "ProjectItem py-10 md:py-20 last:pb-0",
         bgColorEnumToTailwind(bgColor),
         className ? className : ""
       )}
@@ -176,7 +176,7 @@ const ProjectItem: React.FC<Props> = ({
       </div>
       <div
         className={classNames(
-          "FooterFiller hidden absolute top-[100%] h-[105px] w-full z-0",
+          "FooterFiller hidden absolute top-[100%] h-[145px] w-full z-0",
           bgColorEnumToTailwind(bgColor)
         )}
       />
