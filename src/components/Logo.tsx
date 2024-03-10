@@ -1,13 +1,16 @@
 import React from "react";
 
-function Logo() {
+interface Props {
+  classname: string;
+}
+
+const Logo: React.FC<Props> = ({ classname }) => {
   return (
     <svg
-      width="166"
-      height="64"
       viewBox="0 0 166 64"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className={classname}
     >
       <path
         className="pen line-sig-1"
@@ -174,6 +177,6 @@ function Logo() {
       </defs>
     </svg>
   );
-}
+};
 
 export default Logo;

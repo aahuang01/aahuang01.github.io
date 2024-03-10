@@ -30,8 +30,8 @@ module.exports = {
       lg: "1124px",
       // => @media (min-width: 1024px) { ... }
 
-      xl: "1300px",
-      // => @media (min-width: 1300px) { ... }
+      xl: "1350px",
+      // => @media (min-width: 1400px) { ... }
     },
     fontSize: {
       14: ["0.875rem", "1.25rem"],

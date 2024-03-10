@@ -6,7 +6,7 @@ export interface Props {}
 
 const About: React.FC<Props> = () => {
   return (
-    <div className="w-full flex flex-col lg:flex-row-reverse items-stretch px-[7%] lg:px-[150px] py-20 gap-16">
+    <div className="flex flex-col md:flex-row-reverse items-stretch w-[86%] lg:w-[calc(100vw-300px)] max-w-[1200px] mx-auto gap-16">
       <div className="w-full flex-1 max-h-full max-w-full h-auto w-auto overflow-hidden flex justify-center items-start">
         <img
           src={PumpkinsPortrait}

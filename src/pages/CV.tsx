@@ -9,7 +9,7 @@ export interface Props {}
 
 const CV: React.FC<Props> = () => {
   return (
-    <div className="w-full px-[7%] lg:px-[150px] pt-10 pb-5">
+    <div className="w-[86%] lg:w-[calc(100vw-300px)] max-w-[1200px] mx-auto pt-10 pb-5">
       <Header className="mb-7">Aaron Huang</Header>
       <CVSection title="EDUCATION">
         <CVEducationItem

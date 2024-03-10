@@ -50,9 +50,9 @@ const ProjectItem: React.FC<Props> = ({
     switch (size) {
       case ImageSize.REGULAR:
       default:
-        return "px:0 md:px-[28px] sm:px-[7%] lg:px-[150px] *:w-full";
+        return "w-[100vw] sm:w-[86%] md:w-[calc(100vw-56px)] lg:w-[calc(100vw-300px)] max-w-[1400px] mx-auto *:w-full";
       case ImageSize.SMALL:
-        return "px-[28px] sm:px-[7%] lg:px-[250px] md:*:w-[70%]";
+        return "w-[calc(100vw-56px)] sm:w-[86%] lg:w-[calc(100vw-500px)] max-w-[1200px] mx-auto md:*:w-[70%]";
       case ImageSize.WIDE:
         return "px-0 *:w-full";
     }
@@ -82,7 +82,7 @@ const ProjectItem: React.FC<Props> = ({
         {label && (
           <SpreadCaps
             className={classNames(
-              "!font-bold !text-16 !md:text-20 mb-3 md:mb-4 px-[28px] sm:px-[7%] lg:px-[250px]",
+              "!font-bold !text-16 !md:text-20 mb-3 md:mb-4 w-[calc(100vw-56px)] sm:w-[86%] lg:w-[calc(100vw-500px)] max-w-[1200px] mx-auto",
               accentColor
             )}
           >
@@ -94,7 +94,7 @@ const ProjectItem: React.FC<Props> = ({
             return (
               <div
                 className={classNames(
-                  "text-24 lg:text-40 font-semibold mb-3 md:mb-4 px-[28px] sm:px-[7%] lg:px-[250px]",
+                  "text-24 md:text-40 font-semibold mb-3 md:mb-4 w-[calc(100vw-56px)] sm:w-[86%] lg:w-[calc(100vw-500px)] max-w-[1200px] mx-auto",
                   alignmentEnumToTailwind(item.alignment),
                   bgColor === SectionColor.BLACK
                     ? "text-background"
@@ -109,7 +109,7 @@ const ProjectItem: React.FC<Props> = ({
             return (
               <div
                 className={classNames(
-                  "mb-8 px-[28px] sm:px-[7%] lg:px-[250px] text-16 md:text-20",
+                  "mb-8 w-[calc(100vw-56px)] sm:w-[86%] lg:w-[calc(100vw-500px)] max-w-[1200px] mx-auto text-16 md:text-20",
                   bgColor === SectionColor.BLACK
                     ? "text-background"
                     : "text-almostBlack"
@@ -132,7 +132,12 @@ const ProjectItem: React.FC<Props> = ({
                 {item.smallImage && (
                   <div className={"md:hidden"}>{item.smallImage}</div>
                 )}
-                <div className={item.smallImage ? "hidden md:block" : ""}>
+                <div
+                  className={classNames(
+                    item.smallImage ? "hidden md:block" : "",
+                    "*:w-full"
+                  )}
+                >
                   {item.image}
                 </div>
               </div>
@@ -140,7 +145,7 @@ const ProjectItem: React.FC<Props> = ({
           } else if (item instanceof SectionContentListItem) {
             return (
               <div
-                className="my-6 px-[28px] sm:px-[7%] lg:px-[250px] flex gap-6"
+                className="my-6 w-[calc(100vw-56px)] sm:w-[86%] lg:w-[calc(100vw-500px)] max-w-[1200px] mx-auto flex gap-6"
                 key={key}
               >
                 <div

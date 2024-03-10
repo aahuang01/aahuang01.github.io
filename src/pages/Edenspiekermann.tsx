@@ -26,7 +26,6 @@ import AffinityMapping from "../assets/images/Edenspiekermann/ProjectPage/Affini
 import Flowchart from "../assets/images/Edenspiekermann/ProjectPage/Flowchart.png";
 import ContentCockpit from "../assets/images/Edenspiekermann/ProjectPage/ContentCockpit.png";
 import PopOutVisuals1 from "../assets/images/Edenspiekermann/ProjectPage/PopOutVisuals1.png";
-import Arrow1 from "../assets/images/Edenspiekermann/ProjectPage/Arrow1.png";
 import PopOutVisuals2 from "../assets/images/Edenspiekermann/ProjectPage/PopOutVisuals2.png";
 import VirtualInteractability from "../assets/images/Edenspiekermann/ProjectPage/VirtualInteractability.png";
 import Team from "../assets/images/Edenspiekermann/ProjectPage/Team.png";
@@ -34,6 +33,16 @@ import BloombergProfessionalServices from "../assets/images/Edenspiekermann/Proj
 import BloombergDataAnalytics from "../assets/images/Edenspiekermann/ProjectPage/BloombergDataAnalytics.png";
 import BloombergNews from "../assets/images/Edenspiekermann/ProjectPage/BloombergNews.png";
 import BloombergLawAndGovernment from "../assets/images/Edenspiekermann/ProjectPage/BloombergLawAndGovernment.png";
+
+import CompilingIdeas from "../assets/images/Edenspiekermann/ProjectPage/CompilingIdeas.png";
+import CompilingBloomberg from "../assets/images/Edenspiekermann/ProjectPage/CompilingBloomberg.png";
+import CompilingFleshedOut from "../assets/images/Edenspiekermann/ProjectPage/CompilingFleshedOut.png";
+import CompilingRefined from "../assets/images/Edenspiekermann/ProjectPage/CompilingRefined.png";
+
+import RightArrow from "../assets/images/Edenspiekermann/ProjectPage/RightArrow.png";
+import DownArrow from "../assets/images/Edenspiekermann/ProjectPage/DownArrow.png";
+import TArrow from "../assets/images/Edenspiekermann/ProjectPage/TArrow.png";
+import DownLeftArrow from "../assets/images/Edenspiekermann/ProjectPage/DownLeftArrow.png";
 
 export interface Props {}
 
@@ -44,7 +53,7 @@ const Edenspiekermann: React.FC<Props> = () => {
   const cardStyle =
     "flex flex-col items-start rounded-[7px] bg-white h-[300px] w-[160px] md:h-full md:w-full md:max-w-[232px] p-2.5 lg:p-4 shadow-[0_2px_2px_0_rgba(0,0,0,0.25)]";
   const bloombergCards = (
-    <div className="mx-[28px] sm:mx-[7%] flex flex-col items-center">
+    <div className="w-[calc(100vw-56px)] sm:w-[86%] max-w-[1200px] mx-auto flex flex-col items-center">
       <div className="grid grid-cols-2 md:grid-cols-4 leading-snug text-14 md:text-16 lg:text-20 gap-x-4 gap-y-8 justify-items-center w-[336px] md:w-auto lg:w-full">
         <div className={cardStyle}>
           <div className="absolute top-0 left-0 w-full h-full z-20 rounded-[7px] bg-[#EDEDED] opacity-75" />
@@ -54,7 +63,7 @@ const Edenspiekermann: React.FC<Props> = () => {
             alt="A stylized code editor"
             className="h-[84px] lg:h-[94px] self-center lg:mb-4"
           />
-          <div className="text-center">Professional Services</div>
+          <div className="text-center md:text-left">Professional Services</div>
           <div className="flex gap-1">
             <span className="text-edenspiekermannAccent">→</span>
             <span>Bloomberg Terminal</span>
@@ -115,7 +124,9 @@ const Edenspiekermann: React.FC<Props> = () => {
             alt="Items of law"
             className="h-[84px] lg:h-[94px] self-center lg:mb-4"
           />
-          <div className="text-center">Bloomberg Law & Government</div>
+          <div className="text-center md:text-left">
+            Bloomberg Law & Government
+          </div>
         </div>
         <div className="col-span-2 bg-[#C3CACD] px-7 py-6 rounded-lg max-w-[464px] mt-[18px] lg:mt-[40px] text-16 lg:text-20 md:col-start-2 md:col-span-1 md:w-[464px]">
           <svg
@@ -141,20 +152,22 @@ const Edenspiekermann: React.FC<Props> = () => {
   );
 
   const contentCockpit = (
-    <div className="bg-white flex flex-col mx-[28px] sm:mx-[7%] lg:mx-[150px] mb-20 md:mb-10">
+    <div className="bg-white flex flex-col w-[calc(100vw-56px)] sm:w-[86%] lg:w-[calc(100vw-300px)] max-w-[1400px] mx-auto mb-20 md:mb-10">
       <div className="py-8 px-7 md:px-[97px] md:py-12">
-        <div className="text-20 font-medium mb-4">Content Cockpit</div>
-        <div>
+        <div className="text-20 font-medium mb-4 md:text-32">
+          Content Cockpit
+        </div>
+        <div className="text-16 md:text-20">
           Bloomberg content at a glance: users have easy access to content from
           different categories (e.g. stocks, top headlines, podcasts). The
           cockpit allows the user to isolate one page or access all information
           simultaneously in space without needing to switch between pages.
         </div>
       </div>
-      <div className="bg-[#E3E3E3] text-16 py-8 px-7 md:py-[22px] object-contain flex flex-col items-center">
+      <div className="bg-[#E3E3E3] py-8 px-7 md:py-[22px] object-contain flex flex-col items-center">
         <img
           src={ContentCockpit}
-          alt="Content cockpit"
+          alt="A graphic depicting many types of content surrounding the user"
           className="max-h-[345px] max-w-full"
         />
       </div>
@@ -162,10 +175,12 @@ const Edenspiekermann: React.FC<Props> = () => {
   );
 
   const popOutVisuals = (
-    <div className="bg-white flex flex-col mx-[28px] sm:mx-[7%] lg:mx-[150px] mb-10">
+    <div className="bg-white flex flex-col w-[calc(100vw-56px)] sm:w-[86%] lg:w-[calc(100vw-300px)] max-w-[1400px] mx-auto mb-10">
       <div className="py-8 px-7 md:px-[97px] md:py-12">
-        <div className="text-20 font-medium mb-4">Pop-Out Visuals</div>
-        <div className="grid grid-cols-[auto] md:grid-cols-[auto_auto] gap-4 lg:gap-8">
+        <div className="text-20 font-medium mb-4 md:text-32">
+          Pop-Out Visuals
+        </div>
+        <div className="grid grid-cols-[auto] md:grid-cols-[auto_auto] gap-4 lg:gap-8 text-16 md:text-20">
           <div>
             When utilizing supporting media in video content, users are able to
             interact with content inside the video.
@@ -178,25 +193,33 @@ const Edenspiekermann: React.FC<Props> = () => {
           </div>
         </div>
       </div>
-      <div className="bg-[#E3E3E3] text-16 px-2 py-8 md:px-7 md:py-[22px] object-contain flex items-center justify-center max-w-full">
+      <div className="bg-[#E3E3E3] px-2 py-8 md:px-7 md:py-[22px] object-contain flex items-center justify-center max-w-full">
         <div className="max-w-[389px]">
-          <img src={PopOutVisuals1} alt="Pop-out visuals 1" />
+          <img
+            src={PopOutVisuals1}
+            alt="A graphic depicting a chart behind a newscaster"
+          />
         </div>
         <div className="w-[85%] sm:w-[50%] max-w-[98px]">
-          <img src={Arrow1} alt="arrow" />
+          <img src={RightArrow} alt="An arrow pointing to the right" />
         </div>
         <div className="max-w-[281px]">
-          <img src={PopOutVisuals2} alt="Pop-out visuals 2" />
+          <img
+            src={PopOutVisuals2}
+            alt="A graphic depicting the chart in full screen"
+          />
         </div>
       </div>
     </div>
   );
 
   const virtualInteractability = (
-    <div className="bg-white flex flex-col mx-[28px] sm:mx-[7%] lg:mx-[150px] mb-10">
+    <div className="bg-white flex flex-col w-[calc(100vw-56px)] sm:w-[86%] lg:w-[calc(100vw-300px)] max-w-[1400px] mx-auto mb-10">
       <div className="py-8 px-7 md:px-[97px] md:py-12">
-        <div className="text-20 font-medium mb-4">Virtual Interact-ability</div>
-        <div className="grid grid-cols-[auto] md:grid-cols-[auto_auto] gap-4 lg:gap-8">
+        <div className="text-20 font-medium mb-4 md:text-32">
+          Virtual Interact-ability
+        </div>
+        <div className="grid grid-cols-[auto] md:grid-cols-[auto_auto] gap-4 lg:gap-8 text-16 md:text-20">
           <div>
             Allow virtual attendees’ personal avatars to interact with the
             people there in person.
@@ -208,12 +231,124 @@ const Edenspiekermann: React.FC<Props> = () => {
           </div>
         </div>
       </div>
-      <div className="bg-[#E3E3E3] text-16 px-7 object-contain flex flex-col items-center">
+      <div className="bg-[#E3E3E3] px-7 object-contain flex flex-col items-center">
         <img
           src={VirtualInteractability}
-          alt="Virtual interactability"
+          alt="A graphic depicting virtual attendees participating in an in-person Q&A session."
           className="max-h-[389px] max-w-full"
         />
+      </div>
+    </div>
+  );
+
+  const downArrow = (
+    <img
+      src={DownArrow}
+      alt="An arrow pointing down"
+      className="max-h-full max-w-full"
+    />
+  );
+  const rightArrow = (
+    <img
+      src={RightArrow}
+      alt="An arrow pointing to the right"
+      className="max-h-full max-w-full"
+    />
+  );
+  const tArrow = (
+    <img
+      src={TArrow}
+      alt="An arrow pointing to the right with a label line branching from the center"
+      className="max-h-full max-w-full"
+    />
+  );
+  const downLeftArrow = (
+    <img
+      src={DownLeftArrow}
+      alt="An arrow pointing down and to the left"
+      className="max-h-full max-w-full"
+    />
+  );
+
+  const compiling2 = (
+    <div className="flex flex-col gap-6 md:gap-4 xl:flex-row mx-[28px] md:mx-auto w-auto justify-center items-center">
+      <div className="flex flex-col md:flex-row justify-items-center items-center gap-6 xl:gap-4 md:flex md:w-[713px] xl:w-auto">
+        <div className="grid grid-cols-[1fr_auto_1fr] md:grid-cols-1 md:grid-rows-[1fr_auto_1fr] xl:grid-rows-[1fr_auto_1fr_1fr] items-center justify-items-center gap-4 xl:gap-6 xl:w-[72px]">
+          <div className="col-start-2 h-[72px] md:hidden">{downArrow}</div>
+          <div className="col-start-1 w-[64px] hidden md:block md:justify-self-auto xl:hidden">
+            {rightArrow}
+          </div>
+          <div className="col-start-1 max-w-[72px] hidden xl:block self-start">
+            {tArrow}
+          </div>
+          <div className="col-start-3 md:col-start-1 md:row-start-1 justify-self-start md:justify-self-auto md:self-end md:text-center xl:w-[100px]">
+            Brainstorm lots of ideas
+          </div>
+        </div>
+        <div>
+          <img
+            src={CompilingIdeas}
+            alt="Sticky notes with ideas written on them"
+            className="max-w-[216px]"
+          />
+        </div>
+        <div className="grid grid-cols-[1fr_auto_1fr] md:grid-cols-1 md:grid-rows-[1fr_auto_1fr] xl:grid-rows-[1fr_auto_1fr_1fr] items-center justify-items-center gap-4 xl:gap-6 xl:w-[72px]">
+          <div className="col-start-2 h-[72px] md:hidden">{downArrow}</div>
+          <div className="w-[64px] hidden md:block md:justify-self-center xl:hidden">
+            {rightArrow}
+          </div>
+          <div className="max-w-[72px] hidden xl:block self-start">
+            {tArrow}
+          </div>
+          <div className="col-start-3 md:col-start-1 md:row-start-1 md:text-center">
+            Select best ideas
+          </div>
+        </div>
+        <div className="xl:mb-10 shrink">
+          <img
+            src={CompilingBloomberg}
+            alt="The 'Bloomberg World' idea with a star above it"
+            className="max-w-[108px]"
+          />
+        </div>
+      </div>
+      <div className="grid grid-cols-[1fr_auto_1fr] md:grid-cols-1 md:grid-rows-1 xl:grid-rows-[1fr_auto_1fr_1fr] items-center justify-items-center gap-4 xl:gap-6 xl:w-[72px] md:w-[713px]">
+        <div className="col-start-2 h-[72px] md:hidden">{downArrow}</div>
+        <div className="col-start-1 row-start-1 w-[465px] hidden md:block xl:hidden">
+          {downLeftArrow}
+        </div>
+        <div className=" max-w-[72px] hidden xl:block self-start">{tArrow}</div>
+        <div className="col-start-3 md:col-start-1 md:row-start-1 justify-self-start md:justify-self-center md:text-center md:mb-10 xl:mb-0">
+          Fully flesh out ideas
+        </div>
+      </div>
+      <div className="flex flex-col md:flex-row justify-items-center items-center gap-6 md:gap-2 xl:gap-4 md:w-[713px] xl:w-auto">
+        <div>
+          <img
+            src={CompilingFleshedOut}
+            alt="Notes about the Bloomberg World"
+            className="max-w-[336px] md:max-w-[312px] max-h-full"
+          />
+        </div>
+        <div className="grid grid-cols-[1fr_auto_1fr] md:grid-cols-1 md:grid-rows-[1fr_auto_1fr] xl:grid-rows-[1fr_auto_1fr_1fr] items-center justify-items-center gap-4 xl:gap-6 xl:w-[72px]">
+          <div className="col-start-2 h-[72px] md:hidden">{downArrow}</div>
+          <div className="col-start-1 w-[64px] hidden md:block row-start-2 xl:hidden">
+            {rightArrow}
+          </div>
+          <div className="max-w-[72px] hidden xl:block self-start">
+            {tArrow}
+          </div>
+          <div className="col-start-3 md:row-start-1 md:col-start-1 justify-self-start md:justify-self-end md:text-center xl:self-end xl:justify-self-center xl:h-[48px] xl:w-[200px]">
+            Refine ideas and tailor towards Bloomberg
+          </div>
+        </div>
+        <div>
+          <img
+            src={CompilingRefined}
+            alt="The project space in Bloomberg"
+            className="max-w-[336px] md:max-w-[275px] max-h-full"
+          />
+        </div>
       </div>
     </div>
   );
@@ -375,14 +510,8 @@ const Edenspiekermann: React.FC<Props> = () => {
             text: "Our approach to coming up with good thought starters was to use a large quantity of ideas, and narrow the ideas to the ones that were the most interesting or could find the most value for Bloomberg. That way, after they were refined, the resulting thought starters were both applicable and inspiring.",
           }),
           new SectionContentSpacing(),
-          new SectionContentImage({
-            image: (
-              <img
-                src={Flowchart}
-                alt="A flowchart describing the compilation process."
-              />
-            ),
-            size: ImageSize.WIDE,
+          new SectionContent({
+            content: compiling2,
           }),
         ]}
         accentColor={accentColor}

@@ -18,7 +18,7 @@ const Layout: React.FC<Props> = ({ children }) => {
   });
 
   return (
-    <div className="min-h-screen flex flex-col transition-colors duration-100 relative">
+    <div className="min-h-screen flex flex-col justify-center transition-colors duration-100 relative">
       <header>
         <Navbar
           setPage={(page) => setCurrentPage(page)}

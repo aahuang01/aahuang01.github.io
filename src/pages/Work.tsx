@@ -14,7 +14,7 @@ export interface Props {}
 
 const Work: React.FC<Props> = () => {
   return (
-    <div className="w-full px-[7%] lg:px-[150px]">
+    <div className="w-[86%] lg:w-[calc(100vw-300px)] max-w-[1200px] mx-auto">
       <div className="my-[20vh]">
         <Header className="pb-16">Hi, I'm Aaron.</Header>
         <Subheader className="font-light">

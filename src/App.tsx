@@ -9,6 +9,8 @@ import CV from "./pages/CV";
 import AnimationLayout from "./components/AnimationLayout";
 import Edenspiekermann from "./pages/Edenspiekermann";
 import BankOfAmerica from "./pages/BankOfAmerica";
+import Highland from "./pages/Highland";
+import Bant from "./pages/Bant";
 
 export const AuthenticatedContext = createContext<any>(null);
 
@@ -31,7 +33,9 @@ const App: React.FC = () => {
               <Route path="cv" element={<CV />} />
               <Route path="edenspiekermann" element={<Edenspiekermann />} />
               <Route path="bofa" element={<BankOfAmerica />} />
-              <Route path="*" element={<div>todo</div>} />
+              <Route path="highland" element={<Highland />} />
+              <Route path="bant" element={<Bant />} />
+              <Route path="*" element={<Work />} />
             </Route>
           </Routes>
         </BrowserRouter>

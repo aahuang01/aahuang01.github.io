@@ -46,8 +46,11 @@ const Navbar: React.FC<Props> = ({ currentPage, setPage }) => {
   return (
     <div className="flex w-full justify-between items-center px-[7%] lg:px-[150px] py-10 z-50">
       <Link to="/">
-        <div className="flex-shrink" onClick={() => setPage(Page.WORK)}>
-          <Logo />
+        <div
+          className="flex-shrink md:w-auto"
+          onClick={() => setPage(Page.WORK)}
+        >
+          <Logo classname="w-[124px] md:w-[166px] md:h-[64px]" />
         </div>
       </Link>
 
