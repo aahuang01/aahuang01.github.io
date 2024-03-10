@@ -1,7 +1,7 @@
 {
   "name": "aahuang.com",
   "version": "0.1.0",
-  "homepage": "https://aahuang01.github.io/aahuang.com",
+  "homepage": "https://aahuang01.github.io",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
