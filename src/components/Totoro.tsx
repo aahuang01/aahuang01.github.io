@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { classNames } from "../utils/helpers";
 
 import TotoroBase from "./../assets/images/Totoro/TotoroBase.png";
 import TotoroWhites from "./../assets/images/Totoro/TotoroWhites.png";

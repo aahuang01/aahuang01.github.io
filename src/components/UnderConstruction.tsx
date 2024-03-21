@@ -1,5 +1,5 @@
 import React from "react";
-import Kobe from "../assets/images/Kobe.gif";
+import Kobe from "./../assets/images/Kobe.gif";
 import Header from "./Header";
 import { Link } from "react-router-dom";
 

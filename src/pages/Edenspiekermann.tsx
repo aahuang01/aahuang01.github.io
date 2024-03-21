@@ -23,7 +23,6 @@ import BenchmarkingExamples from "../assets/images/Edenspiekermann/ProjectPage/B
 import BenchmarkingExamplesSmall from "../assets/images/Edenspiekermann/ProjectPage/BenchmarkingExamplesSmall.png";
 import Brainstorming from "../assets/images/Edenspiekermann/ProjectPage/Brainstorming.png";
 import AffinityMapping from "../assets/images/Edenspiekermann/ProjectPage/AffinityMapping.png";
-import Flowchart from "../assets/images/Edenspiekermann/ProjectPage/Flowchart.png";
 import ContentCockpit from "../assets/images/Edenspiekermann/ProjectPage/ContentCockpit.png";
 import PopOutVisuals1 from "../assets/images/Edenspiekermann/ProjectPage/PopOutVisuals1.png";
 import PopOutVisuals2 from "../assets/images/Edenspiekermann/ProjectPage/PopOutVisuals2.png";
