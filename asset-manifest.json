@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.61f7a363.css",
-    "main.js": "/static/js/main.5a05e4af.js",
+    "main.js": "/static/js/main.f08d707f.js",
     "static/js/787.a09549c1.chunk.js": "/static/js/787.a09549c1.chunk.js",
     "static/media/Kobe.gif": "/static/media/Kobe.3c9158c39c16c6efbf21.gif",
     "static/media/AppleVisionPro.gif": "/static/media/AppleVisionPro.71a876fb0326f840cfb1.gif",
@@ -10,7 +10,7 @@
     "static/media/InternGroup.png": "/static/media/InternGroup.19d0a5bfa3a3a593f898.png",
     "static/media/Brainstorming.png": "/static/media/Brainstorming.b32cd59f8b9ec4fe6140.png",
     "static/media/AffinityMapping.png": "/static/media/AffinityMapping.9431452b5deb567f0c0f.png",
-    "static/media/ProjectCover.png": "/static/media/ProjectCover.8bd0d6cec510b0096ac0.png",
+    "static/media/ProjectCover.png": "/static/media/ProjectCover.fd6e3d80454d07afde87.png",
     "static/media/Cover.png": "/static/media/Cover.c7b2b3061f7fae5c8cc7.png",
     "static/media/BenchmarkingExamplesSmall.png": "/static/media/BenchmarkingExamplesSmall.0600ef302617ea56588c.png",
     "static/media/DSMSketchFile.png": "/static/media/DSMSketchFile.da75c2b394da586f1fe3.png",
@@ -51,11 +51,11 @@
     "static/media/CompilingBloomberg.png": "/static/media/CompilingBloomberg.7019dfefb1b96c90493f.png",
     "index.html": "/index.html",
     "main.61f7a363.css.map": "/static/css/main.61f7a363.css.map",
-    "main.5a05e4af.js.map": "/static/js/main.5a05e4af.js.map",
+    "main.f08d707f.js.map": "/static/js/main.f08d707f.js.map",
     "787.a09549c1.chunk.js.map": "/static/js/787.a09549c1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.61f7a363.css",
-    "static/js/main.5a05e4af.js"
+    "static/js/main.f08d707f.js"
   ]
 }
