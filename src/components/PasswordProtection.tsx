@@ -45,10 +45,7 @@ const PasswordProtection: React.FC<Props> = ({ children, className }) => {
                   event.preventDefault();
                   if (
                     hash.sha256().update(password).digest("hex") ===
-                    hash
-                      .sha256()
-                      .update(process.env.REACT_APP_PROJECT_PASSWORD)
-                      .digest("hex")
+                    process.env.REACT_APP_PROJECT_PASSWORD_HASH
                   ) {
                     setAuthenticated(true);
                   } else {
