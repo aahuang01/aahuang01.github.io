@@ -29,8 +29,12 @@ const ProjectCover: React.FC<Props> = ({
           "flex w-full gap-5 flex-col md:flex-row"
         )}
       >
-        <div className="shadow-projectCover hover:shadow-projectCoverHover transition-shadow rounded-[3px]">
-          <img src={image} alt={`${title}`} />
+        <div>
+          <img
+            src={image}
+            alt={`${title}`}
+            className="shadow-projectCover hover:shadow-projectCoverHover transition-shadow rounded-[3px]"
+          />
         </div>
         <div className="md:min-w-[250px] lg:min-w-[315px] flex flex-col">
           <SpreadCaps className="mb-1.5 text-appleGray">{label}</SpreadCaps>
