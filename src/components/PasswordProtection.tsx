@@ -3,6 +3,8 @@ import { classNames } from "../utils/helpers";
 import { AuthenticatedContext } from "../App";
 import Totoro from "./Totoro";
 
+const hash = require("hash.js");
+
 interface Props {
   children: any;
   className?: string;
@@ -41,7 +43,13 @@ const PasswordProtection: React.FC<Props> = ({ children, className }) => {
               <form
                 onSubmit={(event: any) => {
                   event.preventDefault();
-                  if (password === process.env.REACT_APP_PROJECT_PASSWORD) {
+                  if (
+                    hash.sha256().update(password).digest("hex") ===
+                    hash
+                      .sha256()
+                      .update(process.env.REACT_APP_PROJECT_PASSWORD)
+                      .digest("hex")
+                  ) {
                     setAuthenticated(true);
                   } else {
                     setBadAttempt(true);

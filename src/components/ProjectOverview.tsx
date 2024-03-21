@@ -24,13 +24,12 @@ const ProjectOverview: React.FC<Props> = ({ description, sections }) => {
               </div>
               {section.values.map((value, valueKey) => {
                 return (
-                  <>
+                  <div key={valueKey}>
                     <div
                       className={classNames(
                         "text-14 md:text-16 text-contrastGray",
                         section.inlineWhenSmall ? "inline md:block" : ""
                       )}
-                      key={valueKey}
                     >
                       {value}
                     </div>
@@ -39,7 +38,7 @@ const ProjectOverview: React.FC<Props> = ({ description, sections }) => {
                         ,{" "}
                       </span>
                     )}
-                  </>
+                  </div>
                 );
               })}
             </div>

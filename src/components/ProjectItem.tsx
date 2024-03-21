@@ -173,7 +173,7 @@ const ProjectItem: React.FC<Props> = ({
           } else if (item instanceof SectionContentSpacing) {
             return <div className="h-1 md:h-5" key={key} />;
           } else if (item instanceof SectionContent) {
-            return item.content;
+            return <div key={key}>{item.content}</div>;
           } else {
             return <></>;
           }
