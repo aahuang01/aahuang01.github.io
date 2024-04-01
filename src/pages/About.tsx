@@ -1,6 +1,9 @@
 import React from "react";
 import TextSection from "../components/TextSection";
+
+/***************** IMAGES *****************/
 import PumpkinsPortrait from "../assets/images/PumpkinsPortrait.png";
+/***************** IMAGES *****************/
 
 export interface Props {}
 

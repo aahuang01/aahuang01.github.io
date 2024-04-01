@@ -16,6 +16,7 @@ import {
 } from "../utils/constants";
 import { classNames } from "../utils/helpers";
 
+/***************** IMAGES *****************/
 import Logo from "../assets/images/Edenspiekermann/Logo.png";
 import Cover from "../assets/images/Edenspiekermann/Cover.png";
 import AppleVisionProGif from "../assets/images/Edenspiekermann/ProjectPage/AppleVisionPro.gif";
@@ -33,15 +34,18 @@ import BloombergDataAnalytics from "../assets/images/Edenspiekermann/ProjectPage
 import BloombergNews from "../assets/images/Edenspiekermann/ProjectPage/BloombergNews.png";
 import BloombergLawAndGovernment from "../assets/images/Edenspiekermann/ProjectPage/BloombergLawAndGovernment.png";
 
+// for the 'compiling' flowchart
 import CompilingIdeas from "../assets/images/Edenspiekermann/ProjectPage/CompilingIdeas.png";
 import CompilingBloomberg from "../assets/images/Edenspiekermann/ProjectPage/CompilingBloomberg.png";
 import CompilingFleshedOut from "../assets/images/Edenspiekermann/ProjectPage/CompilingFleshedOut.png";
 import CompilingRefined from "../assets/images/Edenspiekermann/ProjectPage/CompilingRefined.png";
 
+// all the arrows
 import RightArrow from "../assets/images/Edenspiekermann/ProjectPage/RightArrow.png";
 import DownArrow from "../assets/images/Edenspiekermann/ProjectPage/DownArrow.png";
 import TArrow from "../assets/images/Edenspiekermann/ProjectPage/TArrow.png";
 import DownLeftArrow from "../assets/images/Edenspiekermann/ProjectPage/DownLeftArrow.png";
+/***************** IMAGES *****************/
 
 export interface Props {}
 
@@ -533,17 +537,6 @@ const Edenspiekermann: React.FC<Props> = () => {
           new SectionContent({
             content: virtualInteractability,
           }),
-          // new SectionContentImage({
-          //   image: <img src={ContentCockpit} alt="Content cockpit" />,
-          // }),
-          // new SectionContentImage({
-          //   image: <img src={PopOutVisuals1} alt="Pop-out visuals" />,
-          // }),
-          // new SectionContentImage({
-          //   image: (
-          //     <img src={VisualInteractability} alt="Visual interact-ability" />
-          //   ),
-          // }),
         ]}
         accentColor={accentColor}
         bgColor={SectionColor.GRAY}

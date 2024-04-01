@@ -12,11 +12,13 @@ import {
   SectionContentTitle,
 } from "../utils/constants";
 
+/***************** IMAGES *****************/
 import Logo from "../assets/images/BankOfAmerica/Logo.png";
 import Cover from "../assets/images/BankOfAmerica/Cover.png";
 import DSMSketchFile from "../assets/images/BankOfAmerica/ProjectPage/DSMSketchFile.png";
 import DSMDocumentation from "../assets/images/BankOfAmerica/ProjectPage/DSMDocumentation.png";
 import InternGroup from "../assets/images/BankOfAmerica/ProjectPage/InternGroup.png";
+/***************** IMAGES *****************/
 
 export interface Props {}
 
