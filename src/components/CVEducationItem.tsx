@@ -24,15 +24,18 @@ const CVEducationItem: React.FC<Props> = ({
       )}
     >
       <div className="grow min-w-3/4">
-        <div className="text-16 md:text-24 text-almostBlack font-medium md:mb-0.5 tracking-tighter">
+        <div className="text-16 md:text-24 text-almostBlack font-medium md:mb-0.5 flex w-full md:w-auto justify-between items-center md:block tracking-tighter">
           {title}
+          <Paragraph className="!text-appleGray text-right shrink-0 md:hidden">
+            {time ? time : " "}
+          </Paragraph>
         </div>
         <div className="text-16 md:text-24 text-appleGray font-medium mb-2 md:mb-2.5 tracking-tighter">
           {subtitle}
         </div>
         <Paragraph>{description}</Paragraph>
       </div>
-      <Paragraph className="!text-appleGray text-right shrink-0">
+      <Paragraph className="!text-appleGray text-right shrink-0 hidden md:block">
         {time}
       </Paragraph>
     </div>
