@@ -147,8 +147,7 @@ const Edenspiekermann: React.FC<Props> = () => {
           </svg>
           We are focusing on Bloomberg News as it is the <b>most accessible</b>,
           which means it has the <b>broadest audience</b>, and the{" "}
-          <b>most brand recognition</b> and
-          <b>exposure.</b>
+          <b>most brand recognition</b> and <b>exposure.</b>
         </div>
       </div>
     </div>

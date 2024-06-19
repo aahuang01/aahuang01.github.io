@@ -2,6 +2,8 @@ import { useContext, useState } from "react";
 import { classNames } from "../utils/helpers";
 import { AuthenticatedContext } from "../App";
 import Totoro from "./Totoro";
+import ShowIcon from "./icons/ShowIcon";
+import HideIcon from "./icons/HideIcon";
 
 const hash = require("hash.js");
 
@@ -13,6 +15,7 @@ interface Props {
 const PasswordProtection: React.FC<Props> = ({ children, className }) => {
   const [password, setPassword] = useState("");
   const [badAttempt, setBadAttempt] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
   const { authenticated, setAuthenticated } = useContext(AuthenticatedContext);
 
@@ -54,16 +57,31 @@ const PasswordProtection: React.FC<Props> = ({ children, className }) => {
                 }}
                 className="flex w-full gap-2"
               >
-                <input
-                  className="border-2 border-appleGray rounded-[5px] px-4 py-2 text-16 md:text-20 font-medium text-contrastGray focus:outline-none w-full"
-                  value={password}
-                  onChange={(e) => {
-                    setBadAttempt(false);
-                    setPassword(e.target.value);
-                  }}
-                  type="password"
-                  placeholder="Password"
-                />
+                <div className="relative w-full">
+                  <input
+                    className="border-2 border-appleGray rounded-[5px] px-4 py-2 text-16 md:text-20 font-medium text-contrastGray focus:outline-none w-full pr-12"
+                    value={password}
+                    onChange={(e) => {
+                      setBadAttempt(false);
+                      setPassword(e.target.value);
+                    }}
+                    type={showPassword ? "text" : "password"}
+                    placeholder="Password"
+                  />
+                  <div
+                    className="group absolute top-3 right-4 cursor-pointer"
+                    onClick={() => setShowPassword(!showPassword)}
+                  >
+                    {showPassword ? (
+                      <HideIcon className="fill-appleGray hover:fill-contrastGray transition h-6 w-6" />
+                    ) : (
+                      <ShowIcon className="fill-appleGray hover:fill-contrastGray transition h-6 w-6" />
+                    )}
+                    <div className="group-hover:opacity-100 opacity-0 transition absolute top-[100%] -left-12 px-2 py-0.5 rounded bg-contrastGray whitespace-nowrap text-center text-16 text-background z-50 select-none pointer-events-none">
+                      {showPassword ? "Hide" : "Show"} Password
+                    </div>
+                  </div>
+                </div>
                 <button
                   disabled={badAttempt}
                   className="bg-almostBlack text-background text-16 md:text-20 font-medium rounded-[5px] py-2 px-4 disabled:bg-appleGray"
