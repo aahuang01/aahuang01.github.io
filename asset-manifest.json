@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.61f7a363.css",
-    "main.js": "/static/js/main.c0cb2c20.js",
+    "main.css": "/static/css/main.424fe39a.css",
+    "main.js": "/static/js/main.7cb885ee.js",
     "static/js/787.a09549c1.chunk.js": "/static/js/787.a09549c1.chunk.js",
     "static/media/Kobe.gif": "/static/media/Kobe.3c9158c39c16c6efbf21.gif",
     "static/media/AppleVisionPro.gif": "/static/media/AppleVisionPro.71a876fb0326f840cfb1.gif",
@@ -50,12 +50,12 @@
     "static/media/CompilingIdeas.png": "/static/media/CompilingIdeas.a0338207913d4c7412e1.png",
     "static/media/CompilingBloomberg.png": "/static/media/CompilingBloomberg.7019dfefb1b96c90493f.png",
     "index.html": "/index.html",
-    "main.61f7a363.css.map": "/static/css/main.61f7a363.css.map",
-    "main.c0cb2c20.js.map": "/static/js/main.c0cb2c20.js.map",
+    "main.424fe39a.css.map": "/static/css/main.424fe39a.css.map",
+    "main.7cb885ee.js.map": "/static/js/main.7cb885ee.js.map",
     "787.a09549c1.chunk.js.map": "/static/js/787.a09549c1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.61f7a363.css",
-    "static/js/main.c0cb2c20.js"
+    "static/css/main.424fe39a.css",
+    "static/js/main.7cb885ee.js"
   ]
 }
